@@ -21,7 +21,7 @@ public class ProjectilePool : MonoBehaviour
 
         InitializePool(singleShotPool, singleShotPrefab);
         InitializePool(doubleShotPool, doubleShotPrefab);
-        InitializePool(tripleShotPool, doubleShotPrefab);
+        InitializePool(doubleShotPool, doubleShotPrefab);
     }
 
 
@@ -35,7 +35,7 @@ public class ProjectilePool : MonoBehaviour
             pool.Add(projectile);
         }
     }
-    public GameObject GetProjectile(int type) // get projectile
+    public GameObject GetProjectile(int type) // get projectile type
     {
         List<GameObject> selectedPool = GetSelectedPool(type);
         foreach (GameObject projectile in selectedPool)

@@ -14,36 +14,36 @@ public abstract class FireType
 }
 public class SingleShot : FireType
 {
-    private int projectileIndex; // Índice del proyectil
+    private int projectileIndex; // projectile index
 
     public SingleShot(ProjectilePool projectilePool, Transform firePoint, int projectileIndex) : base(projectilePool, firePoint)
     {
-        this.projectileIndex = projectileIndex; // Asigna el índice
+        this.projectileIndex = projectileIndex; // set index
     }
 
     public override void Fire()
     {
-        GameObject projectile = projectilePool.GetProjectile(projectileIndex); // Obtén el proyectil de la pool
+        GameObject projectile = projectilePool.GetProjectile(projectileIndex); // get projectile from pool
         if (projectile != null)
         {
-            projectile.transform.position = firePoint.position; // Establece la posición del proyectil
-            projectile.SetActive(true); // Activa el proyectil
+            projectile.transform.position = firePoint.position; // Set projectile position
+            projectile.SetActive(true); // Projectile activate
         }
     }
 }
 
 public class DoubleShot : FireType
 {
-    private int projectileIndex; // Índice del proyectil
+    private int projectileIndex; // projectile index
 
     public DoubleShot(ProjectilePool projectilePool, Transform firePoint, int projectileIndex) : base(projectilePool, firePoint)
     {
-        this.projectileIndex = projectileIndex; // Asigna el índice
+        this.projectileIndex = projectileIndex; // Projectile index
     }
 
     public override void Fire()
     {
-        for (int i = -1; i <= 1; i += 2) // Dispara dos proyectiles, uno arriba y uno abajo
+        for (int i = -1; i <= 1; i += 2) // shoot in 2 positions of fire point center 
         {
             GameObject projectile = projectilePool.GetProjectile(projectileIndex);
             if (projectile != null)
@@ -57,16 +57,16 @@ public class DoubleShot : FireType
 
 public class TripleShot : FireType
 {
-    private int projectileIndex; // Índice del proyectil
+    private int projectileIndex; // projectile index
 
     public TripleShot(ProjectilePool projectilePool, Transform firePoint, int projectileIndex) : base(projectilePool, firePoint)
     {
-        this.projectileIndex = projectileIndex; // Asigna el índice
+        this.projectileIndex = projectileIndex; // Set index
     }
 
     public override void Fire()
     {
-        for (int i = -1; i <= 1; i++) // Dispara tres proyectiles, uno en el medio y uno arriba y abajo
+        for (int i = -1; i <= 1; i++) // shoot 3 projectiles in a row from center point of center
         {
             GameObject projectile = projectilePool.GetProjectile(projectileIndex);
             if (projectile != null)

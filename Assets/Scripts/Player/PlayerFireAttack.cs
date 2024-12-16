@@ -15,7 +15,7 @@ public class PlayerFireAttack : MonoBehaviour
     private void Start()
     {
         SetFireType(currentProjectileIndex); // Initial proyectile
-        
+
     }
     private void Update()
     {
@@ -23,6 +23,18 @@ public class PlayerFireAttack : MonoBehaviour
         if (timer >= nextFireTime) // Asegúrate de que el jugador esté disparando
         {
             FireProjectile();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SetFireType(0);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SetFireType(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SetFireType(2);
         }
     }
 
@@ -38,13 +50,13 @@ public class PlayerFireAttack : MonoBehaviour
         {
 
             case 0:
-                fireType = new SingleShot(projectilePool, firePoint, projectileIndex); // Cambia para usar la pool
+                fireType = new SingleShot(projectilePool, firePoint, projectileIndex); // singleshot pool
                 break;
             case 1:
-                fireType = new DoubleShot(projectilePool, firePoint, projectileIndex); // Cambia para usar la pool
+                fireType = new DoubleShot(projectilePool, firePoint, projectileIndex); // Cambia doubleshot pool
                 break;
             case 2:
-                fireType = new TripleShot(projectilePool, firePoint, projectileIndex); // Cambia para usar la pool
+                fireType = new TripleShot(projectilePool, firePoint, projectileIndex); // Cambia tripleshot pool
                 break;
             default:
                 Debug.LogWarning("Shoot type missing");
