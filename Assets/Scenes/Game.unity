@@ -725,6 +725,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5426005052376477523, guid: e85699860b8c9944abe0b661435e135b, type: 3}
+      propertyPath: fireRate
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6435611929191186156, guid: e85699860b8c9944abe0b661435e135b, type: 3}
+      propertyPath: poolSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6435611929191186156, guid: e85699860b8c9944abe0b661435e135b, type: 3}
+      propertyPath: tripleShotPrefab
+      value: 
+      objectReference: {fileID: 3869129875595900409, guid: f4aa5690b1ebc4b4c8650619bb93e7f0, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

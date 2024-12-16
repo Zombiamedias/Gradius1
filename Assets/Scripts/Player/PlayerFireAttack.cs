@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerFireAttack : MonoBehaviour
 {
     public float fireRate = 0.5f;
-    private float nextFireTime = 0f;
+    private float nextFireTime = 1f;
     private int currentProjectileIndex = 0;
     float timer;
     [SerializeField] private ProjectilePool projectilePool; // Referencia a la pool de proyectiles
@@ -41,7 +41,8 @@ public class PlayerFireAttack : MonoBehaviour
     private void FireProjectile()
     {
         fireType.Fire(); // Dispara el proyectil
-        nextFireTime = Time.time + fireRate; // Establece el próximo tiempo de disparo
+         
+        ResetHotFired();
     }
     public void SetFireType(int projectileIndex)
     {
@@ -65,6 +66,7 @@ public class PlayerFireAttack : MonoBehaviour
     }
     public void ResetHotFired()
     {
+        nextFireTime = fireRate; // Establece el próximo tiempo de disparo
         timer = 0;
     }
 }

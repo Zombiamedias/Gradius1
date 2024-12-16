@@ -12,7 +12,7 @@ public class ProjectilePool : MonoBehaviour
     private List<GameObject> doubleShotPool; // DoubleShot pool
     private List<GameObject> tripleShotPool; // TripleShot pool
 
-    public int poolSize = 20; // pool size
+    public int poolSize = 50; // pool size
     private void Start()
     {
         singleShotPool = new List<GameObject>();
@@ -21,7 +21,7 @@ public class ProjectilePool : MonoBehaviour
 
         InitializePool(singleShotPool, singleShotPrefab);
         InitializePool(doubleShotPool, doubleShotPrefab);
-        InitializePool(doubleShotPool, doubleShotPrefab);
+        InitializePool(tripleShotPool, doubleShotPrefab);
     }
 
 
