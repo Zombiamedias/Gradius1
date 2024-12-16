@@ -53,4 +53,4 @@ El juego se centra el eliminar alienuinegasn en sus naves, disparas automaticame
 - Movimiento fluido
 
 ## Ejecucion
-Descargar .zip de la parpeta y ejecutar juego 
+abrir carpeta gradius1, ejecutar juego dando doble clic en 
