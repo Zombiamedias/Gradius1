@@ -32,6 +32,7 @@ Download .zip and double clic in game to start
 ## **Deep Space** 
 juego inspirado en gradius 
 *Emocionante juego de naves clasico con movimiento en horizontal, donde desafia tuis habilidades y destruye naves enemigas y adentrate en lo profundo de el espacio*
+con los botones de 1 2 y 3 seleccionas el tipo de disparo.  
 
 --- 
 
